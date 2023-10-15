@@ -1,7 +1,13 @@
 package org.blackjack;
 
-public class Main {
+public class Blackjack {
+
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+
+
+    }
+
+    public static void iniciar(){
+
     }
 }
