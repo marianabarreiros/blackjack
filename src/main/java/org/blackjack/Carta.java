@@ -4,6 +4,7 @@ import lombok.EqualsAndHashCode;
 import lombok.Getter;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 @Getter
 @EqualsAndHashCode
@@ -38,5 +39,19 @@ public class Carta {
             }
         }
         return cartas;
+    }
+
+    public int getValor() {
+        if ("AJQK".contains(valor)) {
+            if (valor.equals("A")) {
+                return 11;
+            }
+            return 10;
+        }
+        return Integer.parseInt(valor);
+    }
+
+    public boolean isAce() {
+        return Objects.equals(valor, "A");
     }
 }
