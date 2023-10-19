@@ -2,7 +2,6 @@ package org.blackjack;
 
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
-import lombok.ToString;
 
 import java.util.ArrayList;
 
@@ -26,10 +25,15 @@ public class Carta {
     public static ArrayList<Carta> obterCartas() {
         String[] tipos = new String[]{"C", "D", "H", "S"};
         String[] valores = new String[]{"A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"};
-        ArrayList<Carta> cartas = new ArrayList<>();
-        for (String i : tipos) {
-            for (String j : valores) {
-                Carta carta = new Carta(i, j);
+
+        int numTipos = tipos.length;
+        int numValores = valores.length;
+        int tamanhoReal = numTipos * numValores;
+
+        ArrayList<Carta> cartas = new ArrayList<>(tamanhoReal);
+        for (String tipo : tipos) {
+            for (String valor : valores) {
+                Carta carta = new Carta(tipo, valor);
                 cartas.add(carta);
             }
         }
