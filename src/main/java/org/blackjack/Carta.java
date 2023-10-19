@@ -2,6 +2,7 @@ package org.blackjack;
 
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
+import lombok.ToString;
 
 import java.util.ArrayList;
 
@@ -11,6 +12,11 @@ public class Carta {
 
     private final String tipo;
     private final String valor;
+
+    @Override
+    public String toString() {
+        return valor + "-" + tipo;
+    }
 
     public Carta(String tipo, String valor) {
         this.tipo = tipo;
