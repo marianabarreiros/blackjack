@@ -7,10 +7,9 @@ import java.util.ArrayList;
 @Getter
 public class Jogador {
 
-    private final ArrayList<Carta> maoDoJogador;
+    private ArrayList<Carta> maoDoJogador;
     private int quantidadeDePontosDoJogador;
     private int quantidadeDeAsDoJogador;
-    private Carta carta;
 
     public Jogador(ArrayList<Carta> baralhoEmbalhado) {
         this.maoDoJogador = new ArrayList<>();
@@ -18,6 +17,10 @@ public class Jogador {
         this.quantidadeDeAsDoJogador = 0;
 
         this.distribuirCartasAoJogador(baralhoEmbalhado);
+    }
+
+    public Jogador(){
+
     }
 
     public ArrayList<Carta> distribuirCartasAoJogador(ArrayList<Carta> baralhoEmbaralhado) {

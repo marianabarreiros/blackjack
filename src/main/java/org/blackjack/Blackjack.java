@@ -5,9 +5,9 @@ public class Blackjack {
     public static void main(String[] args) {
         Baralho baralho = new Baralho();
         baralho.construirBaralho();
-        System.out.println(baralho.getCartas());
+        System.out.println(baralho.getCartas().size());
         baralho.embaralharCartas();
-        System.out.println(baralho.getCartas());
+        System.out.println(baralho.getCartas().size());
 
         System.out.println(baralho.getCartas());
         Dealer dealer = new Dealer(baralho.getCartas());
