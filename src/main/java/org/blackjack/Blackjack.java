@@ -20,8 +20,8 @@ public class Blackjack {
         Jogador jogador = new Jogador(baralho.getCartas());
 
         JPanel buttonPanel = new JPanel();
-        JButton hitButton = new JButton("Hit");
-        JButton stayButton = new JButton("Stay");
+        JButton hitButton = new JButton("Pedir");
+        JButton stayButton = new JButton("Ficar");
 
 
         JFrame frame = new JFrame("Black Jack");
