@@ -51,7 +51,11 @@ public class Carta {
         return Integer.parseInt(valor);
     }
 
-    public boolean isAce() {
+    public boolean isAs() {
         return Objects.equals(valor, "A");
+    }
+
+    public String getImagemDaCarta() {
+        return "../../carta/" + this + ".png";
     }
 }

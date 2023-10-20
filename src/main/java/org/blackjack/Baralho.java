@@ -18,7 +18,6 @@ public class Baralho {
     public ArrayList<Carta> construirBaralho() {
         return Carta.obterCartas();
     }
-
     public void embaralharCartas() {
         Collections.shuffle(cartas);
     }

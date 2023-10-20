@@ -2,10 +2,13 @@ package org.blackjack;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
+import org.blackjack.Carta;
 
 import java.util.ArrayList;
 
 @Getter
+@Setter
 @NoArgsConstructor
 public class Dealer {
     private Carta cartaEscondida;
@@ -18,12 +21,12 @@ public class Dealer {
         // Inicializa a carta escondida
         cartaEscondida = baralhoEmbaralhado.remove(baralhoEmbaralhado.size() - 1);
         dealerSoma += cartaEscondida.getValor();
-        dealerQuantidadeAs += cartaEscondida.isAce() ? 1 : 0;
+        dealerQuantidadeAs += cartaEscondida.isAs() ? 1 : 0;
 
         // Inicializa a mão do dealer
         carta = baralhoEmbaralhado.remove(baralhoEmbaralhado.size() - 1);
         dealerSoma += carta.getValor();
-        dealerQuantidadeAs += carta.isAce() ? 1 : 0;
+        dealerQuantidadeAs += carta.isAs() ? 1 : 0;
         maoDealer = new ArrayList<>();
         maoDealer.add(carta);
     }

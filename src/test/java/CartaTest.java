@@ -43,13 +43,13 @@ public class CartaTest {
     @Test
     @DisplayName("Carta deve ser um As")
     public void testIsAce() {
-        assertTrue(carta.isAce());
+        assertTrue(carta.isAs());
     }
 
     @Test
     @DisplayName("Carta diferente de A não é um As")
     public void testNoIsAce() {
         Carta outraCarta = new Carta("S", "9");
-        assertFalse(outraCarta.isAce());
+        assertFalse(outraCarta.isAs());
     }
 }
