@@ -33,7 +33,7 @@ public class JogadorTest {
 
     @Test
     @DisplayName("Mão do Jogador deve ter 2 cartas")
-    void testeQuantidadeDeCartasNaMãoDoJogador() {
+    void testeQuantidadeDeCartasNaMaoDoJogador() {
         assertEquals(2, this.jogador.getMaoDoJogador().size());
     }
 }
